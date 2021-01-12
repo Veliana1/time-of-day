@@ -84,25 +84,42 @@
       </small>
     </footer>
 	<!-- END Footer -->
-let myDate = new Date(); 
+<script>
+	let myDate = new Date(); 
 let myHours = myDate.getHours();
 let myGreeting = '';
 let myColor = '';
-let myPic = """;
+let myPic = "images/";
 
-if(myHour >= 5 && myHour <12){
-	myGreeting = "Good Morning";
-	myColor = "yellow";
-	myPic += "morning.jpg":
-}else{
-	alert('NOT morning');
-}	
+myHours= myDate.getHours();
 
-
+if(myHours >= 5 && myHours <12) {
+    myGreeting = "Good Morning";
+    myColor= "yellow";
+    myPic += "morning.jpg";
+} else if (myHours >= 12 && myHours <18) {
+    myGreeting = "Good Afternoon";
+    myColor= "teal";
+    myPic += "afternoon.jpg";
+} else if (myHours >= 18 && myHours <23) {
+    myGreeting = "Good Evening";
+    myColor= "orange";
+    myPic += "evening.jpg";
+} else { (myHours >= 23 && myHours <5) 
+    myGreeting = "Good Night";
+    myColor= "pink";
+    myPic += "night.jpg";
+}
+    {alert('It is not the morning')
+}
+var theYear = document.createElement( 'div' );
+theYear.classList.add( 'the-year' );
+theYear.textContent = 'Copyright ' + new Date().getFullYear() + ' Time of Day.';
+document.body.appendChild( theYear );
 
 document.getElementById('mydiv').innerHTML = myGreeting;
 document.body.style.backgroundColor = myColor;
 document.getElementById("mypic").src = "mypic";
-
+</script>
 </body>
 </html>
